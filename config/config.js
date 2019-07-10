@@ -70,7 +70,7 @@ var config = {
 		},
 		{
 			module: "currentweather",
-			disabled: false,
+			disabled: true,
 			position: "top_right",
 			config: {
 				location: "Utica, US",
@@ -81,7 +81,7 @@ var config = {
 		},
 		{
 			module: "weatherforecast",
-			disabled: false,
+			disabled: true,
 			position: "top_right",
 			//header: "Weather Forecast",
 			config: {
@@ -118,9 +118,25 @@ var config = {
 			module: 'MMM-PIR-Sensor',
 			disabled: false,
 			config: {
-			// See 'Configuration options' for more information.https://github.com/paviro/MMM-PIR-Sensor
 				sensorPIN: "4", //BCM Number
-				powerSavingDelay: "60", //Delay in seconds
+				powerSavingDelay: "10", //Delay in seconds
+				debug: true,
+			}
+		},
+		{
+			module: 'MMM-NOAA3',
+			disabled: false,
+			position: "top_right",
+			config: {
+			 	provider: "accuweather",
+			 	//airKey: "t97iRW2vuFozKkhxL", //? Unknown
+				//apiKey: "dpiEQQfAZFPNoKKVMN1X8tQlEWAapbW2", //mancave521@gmail.com
+				apiKey: "JdknjG09Vc2ojHU2Qdx8w9GLEvSDOJAL", //rob.verdon@gmail.com
+			        css: "NOAA3",                 // THIS MUST CONTAIN A CSS STYLE NAME 
+			 	userlat: "43.102039", //MUST HAVE BOTH
+			        userlon: "-75.230003",  //MUST HAVE BOTH
+			 	zip: '329671', //MUST have valid zip Code
+                                updateInterval: 60* 60 * 1000,
 			}
 		}
 
