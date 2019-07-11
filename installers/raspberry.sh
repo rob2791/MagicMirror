@@ -154,7 +154,7 @@ if [ -d "$HOME/MagicMirror" ] ; then
 fi
 
 echo -e "\e[96mCloning MagicMirror ...\e[90m"
-if git clone --depth=1 https://github.com/MichMich/MagicMirror.git; then 
+if git clone --depth=1 https://github.com/rob2791/MagicMirror.git; then 
 	echo -e "\e[92mCloning MagicMirror Done!\e[0m"
 else
 	echo -e "\e[91mUnable to clone MagicMirror."
@@ -171,7 +171,7 @@ else
 fi
 
 # Use sample config for start MagicMirror
-cp config/config.js.sample config/config.js
+#cp config/config.js.sample config/config.js
 
 # Check if plymouth is installed (default with PIXEL desktop environment), then install custom splashscreen.
 echo -e "\e[96mCheck plymouth installation ...\e[0m"
